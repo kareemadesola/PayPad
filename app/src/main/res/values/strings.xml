@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PayPad</string>
+    <string name="amount">Amount</string>
+    <string name="payment_button">Pay</string>
+    <string name="payment_successful">Payment Successful</string>
+    <string name="payment_unsuccessful">Payment Unsuccessful</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
