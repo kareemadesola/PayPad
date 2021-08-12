@@ -11,20 +11,26 @@
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
-            android:id="@+id/action_mainFragment_to_paymentSuccessfulFragment"
-            app:destination="@id/paymentSuccessfulFragment" />
+            android:id="@+id/action_mainFragment_to_paymentSuccessfulDialog"
+            app:destination="@id/paymentSuccessfulDialog" />
         <action
-            android:id="@+id/action_mainFragment_to_paymentUnsuccessfulFragment"
-            app:destination="@id/paymentUnsuccessfulFragment" />
+            android:id="@+id/action_mainFragment_to_paymentUnsuccessfulDialog"
+            app:destination="@id/paymentUnsuccessfulDialog" />
     </fragment>
-    <fragment
-        android:id="@+id/paymentSuccessfulFragment"
-        android:name="com.example.paypad.PaymentSuccessfulFragment"
-        android:label="PaymentSuccessfulFragment"
-        tools:layout="@layout/fragment_payment_successful"/>
-    <fragment
-        android:id="@+id/paymentUnsuccessfulFragment"
-        android:name="com.example.paypad.PaymentUnsuccessfulFragment"
-        android:label="PaymentUnsuccessfulFragment"
-        tools:layout="@layout/fragment_payment_unsuccessful"/>
+    <dialog
+        android:id="@+id/paymentSuccessfulDialog"
+        android:name="com.example.paypad.PaymentSuccessfulDialog"
+        android:label="PaymentSuccessfulDialog" >
+        <action
+            android:id="@+id/action_paymentSuccessfulDialog_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/paymentUnsuccessfulDialog"
+        android:name="com.example.paypad.PaymentUnsuccessfulDialog"
+        android:label="PaymentUnsuccessfulDialog" >
+        <action
+            android:id="@+id/action_paymentUnsuccessfulDialog_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </dialog>
 </navigation>

@@ -40,12 +40,12 @@ class MainFragment : Fragment() {
     }
 
     /**
-     * takes you to a success or failure page depending on whether payment is confired
+     * takes you to a success or failure page depending on whether payment is confirmed
      */
     private fun confirmPayment() {
         val action = listOf(
-            MainFragmentDirections.actionMainFragmentToPaymentSuccessfulFragment(),
-            MainFragmentDirections.actionMainFragmentToPaymentUnsuccessfulFragment()
+            MainFragmentDirections.actionMainFragmentToPaymentSuccessfulDialog(),
+            MainFragmentDirections.actionMainFragmentToPaymentUnsuccessfulDialog()
         ).random()
         findNavController().navigate(action)
 //        val intent = Intent(context, listOf(PaymentSuccessfulFragment::class.java,PaymentUnsuccessfulFragment::class.java).random())
